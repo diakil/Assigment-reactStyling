@@ -1,25 +1,25 @@
-import PromoBanner from "./components/PromoBanner"
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-import MobileMenu from "./components/MobileMenu"
-import Hero from "./components/Hero"
-import Features from "./components/Features"
-
+// src/App.jsx
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/pages/Hero'; // atau sesuaikan
+import Story from './components/pages/Story';
+import Menu from './components/pages/Menu';
+import Contact from './components/pages/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <Navbar />
-      <MobileMenu />
-      <main className="flex-grow">
-        <Hero />
-        <Features />
-        <PromoBanner />
+      <main className="pt-20"> {/* agar tidak tertutup navbar */}
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/Story.jsx" element={<Story />} />
+          <Route path="/Menu.jsx" element={<Menu />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
-      <Footer />
-    </div>
-  )
+    </>
+  );
 }
 
-export default App
-
+export default App;

@@ -21,10 +21,10 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex">
           <ul className="flex items-center gap-8 text-sm font-medium">
-            <li><a href="#" className="hover:text-primary">Home</a></li>
-            <li><a href="#" className="hover:text-primary">Our Story</a></li>
-            <li><a href="#" className="hover:text-primary">Menu</a></li>
-            <li><a href="#" className="hover:text-primary">Contact</a></li>
+            <li><a href="Hero.jsx" className="hover:text-primary">Home</a></li>
+            <li><a href="Story.jsx" className="hover:text-primary">Our Story</a></li>
+            <li><a href="Menu.jsx"  className="hover:text-primary">Menu</Link></li>
+            <li><a href="/contact.jsx"  className="hover:text-primary">Contact</Link></li>
           </ul>
         </nav>
 
